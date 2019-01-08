@@ -1,6 +1,8 @@
 // nav
+document.getElementById('myTopnav').addEventListener('click', respNav);
 
-function myFunction() {
+function respNav() {
+
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
@@ -11,13 +13,15 @@ function myFunction() {
 
 // scroll btn
 
+document.getElementById('scrollBtn').addEventListener('click', topFunction);
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
+        document.getElementById("scrollBtn").style.display = "block";
     } else {
-        document.getElementById("myBtn").style.display = "none";
+        document.getElementById("scrollBtn").style.display = "none";
     }
 }
 
